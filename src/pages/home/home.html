@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Number Base Converter
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-title>Convert: </ion-title>
+    <number-base-input
+      [defaultNumberBase]="input1"
+      [numberInput]="number1"
+      (update)="update1($event)"
+    ></number-base-input>
+    <br />
+    <ion-title>To: </ion-title>
+    <number-base-input
+      [defaultNumberBase]="input2"
+      [numberInput]="number2"
+      (update)="update2($event)"
+    ></number-base-input>
+    <br />
+    <button ion-button full (click)="convert()">Convert</button>
+</ion-list>
+</ion-content>

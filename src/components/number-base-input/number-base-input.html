@@ -1,0 +1,6 @@
+<ion-item>
+  <ion-input (change)="updateData()" (keypress)="checkIfNumber($event)" type="text" [(ngModel)]="numberInput"></ion-input>
+  <ion-select (ionChange)="changeBase()" [(ngModel)]="defaultNumberBase">
+    <ion-option *ngFor="let numberBase of numberBases" [value]="numberBase.value">{{numberBase.text}}</ion-option>
+  </ion-select>
+</ion-item>

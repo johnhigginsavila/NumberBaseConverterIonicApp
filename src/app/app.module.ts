@@ -8,6 +8,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { ComputePageModule } from '../pages/compute/compute.module';
+import { ComputePage } from '../pages/compute/compute';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -16,12 +19,14 @@ import { HomePage } from '../pages/home/home';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    ComponentsModule
+    ComponentsModule,
+    ComputePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ComputePage
   ],
   providers: [
     StatusBar,
